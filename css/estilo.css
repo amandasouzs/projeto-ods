@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    line-height: 2rem;
+    --verde:  rgb(96, 183, 49);
+    --bg-menu: rgb(160, 245, 115);
+    --cinza:  rgb(223, 221, 221);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: fit-content;
+}
+
+h2{
+    color: var(--verde);
+}
+
+p, a{
+    color: inherit;
+}
+
+iframe{
+    width: 100%;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.justificado{
+    text-align: justify;
+}
+
+/* Menu de Navegação */
+
+.header{
+    background-color: var(--bg-menu);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu a{
+    padding: .60em 1.15em;
+    text-decoration: none;
+    color: black;
+    border-radius: 2rem;
+}
+
+.menu a:hover{
+    background-color: var(--verde);
+    color: white;
+}
+
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    gap: .7rem;
+    margin-right: .5rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    fill: black;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hero Banner */
+
+#hero_banner{
+    background-image: url(https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2022/07/26101636/6083ddea-3e8b-47bc-9216-ff2078b31683.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 32rem;
+    height: 1rem;
+}
+
+.container_hero{
+    padding-top: 1px;
+}
+
+.container_hero h1{
+    font-family: 'Space Grotesk';
+    padding: 5rem 0 2rem 10rem;
+}
+
+.text_banner{
+    width: 35vw;
+    padding: 0 0 0 10rem;
+}
+
+.text_banner p{
+    padding-bottom: 2rem;
+}
+
+.text_banner a{
+    background-color: var(--verde);
+    padding: .80em 1.15em;
+    text-decoration: none;
+    border-radius: 1.5rem;
+}
+
+.text_banner a:hover{
+    color: white;
+}
+
+/* Seção Introdução */
+
+.introducao p{
+    padding: 5rem 15rem 5rem;
+}
+
+.introducao_img{
+    display: flex;
+    justify-content: center;
+}
+
+/* Seção Metas */
+
+#metas{
+    padding-top: 6rem;
+}
+
+.container_metas{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--cinza);
+    padding-bottom: 1rem;
+}
+
+#metas ul{
+    list-style-type: none;
+    width: 50%;
+    padding-left: 0;
+}
+
+#metas ul strong{
+    color: var(--verde);
+    /* font-size: larger; */
+}
+
+#metas li{
+    padding-top: 1rem;
+}
+
+#metas iframe{
+    padding-top: 8rem;
+    width: 40%;
+    margin: 0;
+}
+
+/* Seção Movimento Água */
+
+.container_movimento{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--cinza);
+    padding: 2rem 0 5rem;
+}
+
+.parte1{
+    width: 40%;
+}
+
+.btn{
+    background-color: var(--verde);
+    padding: .60em 1.15em;
+    text-decoration: none;
+    border-radius: 2rem;
+    float: right;
+}
+
+.parte1 a:hover{
+    color: white;
+}
+
+.parte2{
+    width: 40%;
+}
+
+/* Seção Sobre */
+
+#sobre{
+    padding-top: 8rem;
+}
+
+#sobre h2{
+    text-align: center;
+}
+
+#sobre p{
+    width: 50%;
+    padding: 3rem;
+    border-style: dotted;
+}
+
+.texto_sobre{
+    display: flex;
+    justify-content: center;
+}
+
+#github{
+    float: right;
+    padding-top: 4%;
+}
+
+/* Seção Créditos */
+
+#creditos{
+    text-align: center;
+    padding: 6rem 2rem 2rem;
+}
+
+#creditos ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 10px 2px;
+}
+
+#creditos a{
+    text-decoration: none;
+}
+
+#creditos a:hover{
+    text-decoration: underline;
+}
+
+/* Rodapé */
+
+#rodape{
+    text-align: center;
+    background-color: rgb(60, 60, 60);
+    padding: 0.6rem;
+    color: var(--cinza);
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px) {
+
+    .container_hero h1{
+        padding: 8rem 8rem 0 4rem;
+    }
+
+    .text_banner{
+        width: 250px;
+        padding: 0 0 0 4rem;
+    }
+
+    .introducao p{
+        padding: 5rem 5rem 5rem;
+    }
+
+    .introducao_img{
+        width: 100%;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .menu{
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        background-color: var(--bg-menu);
+        width: 100%;
+    }
+    
+    .menu.active{
+        display: flex;
+    }
+
+    .menu li{
+        margin: 15px 0;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .container_metas{
+        display: block;
+        text-align: center;
+    }
+
+    #metas ul{
+        width: 85%;
+        padding: 2rem 0 2rem 3rem;
+    }
+
+    #metas iframe{
+        width: 80%;
+    }
+
+    .container_movimento{
+        display: block;
+        padding-bottom: 6rem;
+    }
+
+    .parte1{
+        text-align: center;
+        width: 85%;
+        padding: 2rem 0 5rem 3rem;
+    }
+
+    .parte2{
+        width: 80%;
+        padding-left: 10%;
+    }
+}
